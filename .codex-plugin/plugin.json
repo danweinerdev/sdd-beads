@@ -1,6 +1,6 @@
 {
   "name": "sdd-beads",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Connects approved spec-driven development plans to Beads execution queues without creating a second specification source of truth.",
   "author": {
     "name": "Daniel Weiner"

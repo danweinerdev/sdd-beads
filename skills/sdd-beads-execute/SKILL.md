@@ -12,7 +12,7 @@ installed plugin roots, runtime-configured skill roots, and Codex plugin
 caches; accept only a root with this skill, both named shared files, and an
 `sdd-beads` manifest. Missing or ambiguous roots are a stop. Then read
 `shared/agent-runtime.md` and `shared/contract.md`. This skill coordinates
-execution; it does not replace the runtime's SDD implementation skill.
+execution; it does not replace the runtime's `sdd-implement` skill.
 
 ## Orient and claim
 
@@ -33,7 +33,7 @@ execution; it does not replace the runtime's SDD implementation skill.
 
 ## Implement
 
-Invoke the available SDD implementation workflow for the exact plan task. The
+Invoke the available `sdd-implement` workflow for the exact plan task. The
 SDD workflow controls code inspection, tests, verification, task status, and
 scope escalation. Pass it the Beads issue ID as operational context, but do not
 substitute the issue description for the plan task.
