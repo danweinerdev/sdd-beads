@@ -1,0 +1,24 @@
+{
+  "name": "sdd-beads",
+  "version": "0.1.0",
+  "description": "Connects approved spec-driven development plans to Beads execution queues without creating a second specification source of truth.",
+  "author": {
+    "name": "Daniel Weiner"
+  },
+  "license": "MIT",
+  "keywords": ["planning", "beads", "coordination", "sdd"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SDD Beads",
+    "shortDescription": "Project execution bridge for SDD plans and Beads",
+    "longDescription": "Publishes approved SDD plan structure into Beads, coordinates implementation claims, and reconciles execution state while keeping SDD artifacts authoritative for scope and completion.",
+    "developerName": "Daniel Weiner",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": [
+      "Publish this approved SDD plan to Beads.",
+      "Claim and implement this SDD task through Beads.",
+      "Reconcile this SDD plan with its Beads issues."
+    ]
+  }
+}
