@@ -76,10 +76,13 @@ proof as follows:
    and must stop for manual resolution.
 
 Immediately before proof construction, recompute the complete canonical
-identity: VCS/base, clean revision or source snapshot, exclusions,
-ignored/environment/directory inputs, exact governing-input reference set, and
-governing-intent projection digest. A source or intent mismatch makes the
-evidence stale and forbids comment creation or closure.
+identity under the installed sdd-planner contract: for normal Git, the tested
+implementation commit and committed lifecycle evidence; for a genuine fallback,
+the source snapshot, exclusions, inventories, exact governing-input reference
+set, and governing-intent projection digest. A source or intent mismatch makes
+the evidence stale and forbids comment creation or closure. Beads proof
+collection never substitutes for clean task commits or causes ordinary Git
+implementation to remain dirty.
 
 Closure validation depends on the installed `sdd-planner` contract (D-0005).
 Locate `sdd-implement` through the runtime's exposed skill inventory or its

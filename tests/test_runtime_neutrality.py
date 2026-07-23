@@ -24,6 +24,20 @@ class RuntimeNeutralityTests(unittest.TestCase):
                 for identifier in forbidden_identifiers:
                     self.assertNotIn(identifier, content)
 
+    def test_beads_closure_preserves_commit_first_sdd_execution(self):
+        execute = " ".join(
+            (ROOT / "skills/sdd-beads-execute/SKILL.md").read_text().lower().split()
+        )
+        contract = " ".join((ROOT / "shared/contract.md").read_text().lower().split())
+        for required in ("clean", "complete", "bisectable", "implementation commit"):
+            self.assertIn(required, execute)
+        self.assertIn("lifecycle/evidence commit", execute)
+        self.assertIn("never substitutes for clean task commits", contract)
+        self.assertNotIn(
+            "do not commit, git-push, or dolt-push without explicit authority",
+            execute,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

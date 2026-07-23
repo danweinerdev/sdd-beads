@@ -71,25 +71,28 @@ search roots defined in `shared/contract.md`; canonicalize candidates,
     require exactly one valid `sdd-planner` root, and read its
     `shared/completion-evidence.md`. Stop closure if that contract is unavailable
    or ambiguous.
-2. Run every SDD verification command and read the output.
-3. Use `sdd-implement` to populate the task's `### Completion Evidence` under
-   the sdd-planner `shared/completion-evidence.md` contract while the task is
-   still non-complete, then update SDD task/subtask status only from that
-   evidence.
-4. Re-read the task body and frontmatter. Confirm the task is `complete`, the
+2. Confirm the single `sdd-implement` invocation above completed its full
+   workflow. When normal Git commits are authorized, that means one clean,
+   complete, bisectable implementation commit for the exact task followed by
+   its separate lifecycle/evidence commit. Do not invoke implementation again,
+   rewrite its evidence, keep implementation dirty, or request a fallback
+   snapshot merely to prepare Beads proof material.
+3. Re-read the task body and frontmatter and run the installed sdd-planner
+   validation/identity recheck required by its completion-evidence contract.
+   Confirm the task is `complete`, the
     evidence section is present and non-pending, and its complete identity
-    matches an immediate recomputation: VCS/base, clean revision or source
-    snapshot, exclusions, ignored/environment/directory inputs, exact
-    governing-input set, and governing-intent projection digest. Confirm every
+    matches an immediate recomputation: the tested implementation commit for
+    normal Git, or the source snapshot, exclusions, inventories, and governing
+    intent required by a genuine fallback. Confirm every
     prospective verification behavior is covered and every final required check
     passed. Any source or intent mismatch forbids proof creation and closure.
-5. Follow the canonical proof protocol in `shared/contract.md` for external
+4. Follow the canonical proof protocol in `shared/contract.md` for external
    reference `sdd-task:<PlanName>:<task-id>`. Inspect existing comments with
    `bd show <id> --json --include-comments` or `bd comments <id> --json`; reuse
    one byte-identical valid proof, and stop on a duplicate or conflicting
    marker. Submit a new exact comment with `bd comment <id> --stdin`, then read
    it back and recompute the body hash.
-6. Close the bead with a reason that references that exact marker, then re-read
+5. Close the bead with a reason that references that exact marker, then re-read
    the issue and comments and verify the reason and unique stored proof:
 
    ```bash
@@ -101,4 +104,6 @@ completion evidence, a stale evidence revision, or an unrecorded scope change.
 On a blocker, keep the failure output verbatim, update SDD/Beads status
 consistently where appropriate, and comment with the required next action.
 
-Do not commit, Git-push, or Dolt-push without explicit authority.
+Do not create independent commits outside `sdd-implement`; that workflow owns
+the task's policy-authorized implementation and lifecycle commits. Never
+Git-push or Dolt-push without explicit authority.

@@ -45,7 +45,8 @@ Compare by canonical `external_ref`, never by title:
   --include-comments` or `bd comments <id> --json`. Validate the canonical proof
   in `shared/contract.md` byte-for-byte against current `spec_id`,
   `external_ref`, and SDD evidence; recompute its proof hash and validate the
-  recorded revision, durable source snapshot objects, and durable governing-
+  recorded implementation revision and committed lifecycle evidence, or the
+  durable source snapshot objects and durable governing-
   intent projection. For an open issue being closed, also recompute current
   source identity and intent; do not compare an already closed issue's
   historical source/intent to a worktree or artifacts changed by later tasks.
