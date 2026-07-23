@@ -86,7 +86,7 @@ Locate `sdd-implement` through the runtime's exposed skill inventory or its
 active repository/user `.agents` roots, installed plugin roots,
 runtime-configured skill roots, and Codex plugin caches. Canonicalize every
 candidate, require exactly one root with the skill, shared contract, and
-`codex-sdd-planner` manifest, then read that installation's
+`sdd-planner` manifest, then read that installation's
 `shared/completion-evidence.md`. If the peer skill or contract is unavailable
 or ambiguous, auditing may continue but no task, phase, or plan bead may close.
 

@@ -21,7 +21,7 @@ repository.
 Before validating or repairing any closure, locate `sdd-implement` through the
 runtime inventory or active skill/plugin search roots defined in
 `shared/contract.md`; canonicalize candidates, require exactly one valid
-`codex-sdd-planner` root, and read its `shared/completion-evidence.md`. If the
+`sdd-planner` root, and read its `shared/completion-evidence.md`. If the
 skill or contract is missing or ambiguous, continue the audit but do not close
 any issue.
 

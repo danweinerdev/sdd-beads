@@ -62,9 +62,9 @@ That mapping is an explicit triage decision; never infer it from similar titles.
 Close in this order:
 
 1. Locate `sdd-implement` through the runtime inventory or active skill/plugin
-   search roots defined in `shared/contract.md`; canonicalize candidates,
-   require exactly one valid `codex-sdd-planner` root, and read its
-   `shared/completion-evidence.md`. Stop closure if that contract is unavailable
+search roots defined in `shared/contract.md`; canonicalize candidates,
+    require exactly one valid `sdd-planner` root, and read its
+    `shared/completion-evidence.md`. Stop closure if that contract is unavailable
    or ambiguous.
 2. Run every SDD verification command and read the output.
 3. Use `sdd-implement` to populate the task's `### Completion Evidence` under
