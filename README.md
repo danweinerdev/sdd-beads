@@ -9,6 +9,10 @@ The boundary is deliberate:
   verification, and durable completion status.
 - Beads owns the live ready queue, claims, assignment, handoffs, and discovered
   work.
+- The independently installed `sdd-implement` workflow owns implementation
+  dispatch. Runtime adapters may map its stable semantic task name/description
+  identifier `implement_task`; Beads does not rewrite it, select or name a
+  runtime agent or model, or depend on OpenCode.
 - Beads issues link to SDD artifacts; they do not copy or replace them.
 
 ## Skills

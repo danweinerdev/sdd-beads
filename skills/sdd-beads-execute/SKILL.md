@@ -33,10 +33,15 @@ execution; it does not replace the runtime's `sdd-implement` skill.
 
 ## Implement
 
-Invoke the available `sdd-implement` workflow for the exact plan task. The
-SDD workflow controls code inspection, tests, verification, task status, and
-scope escalation. Pass it the Beads issue ID as operational context, but do not
-substitute the issue description for the plan task.
+Invoke the independently installed `sdd-implement` workflow for the exact plan
+task. When collaboration dispatch is available, preserve that workflow's stable
+semantic task name/description identifier `implement_task` unchanged. Do not
+select or name a runtime agent or model. The SDD workflow controls code
+inspection, tests, verification, task status, and scope escalation. Pass it the
+Beads issue ID as operational context, but do not substitute the issue
+description for the plan task. When collaboration dispatch is unavailable,
+invoke `sdd-implement` normally; that workflow retains its transparent
+primary-agent fallback.
 
 For a material handoff, record concise state with:
 

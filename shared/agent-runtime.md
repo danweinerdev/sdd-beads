@@ -30,7 +30,12 @@ by the plugin README is an installation action, not runtime resource copying.
 
 ## Optional peers
 
-`sdd-beads` may hand work to an independently installed SDD implementation
-skill. Capability-detect that skill through the current runtime. Do not search
-for or install a peer plugin during execution, and do not reimplement its
-workflow when it is absent.
+Beads coordinates ready work, claims, and handoffs. The independently installed
+`sdd-implement` workflow owns implementation dispatch. When collaboration
+dispatch is available, runtime adapters may map its stable semantic task
+name/description identifier `implement_task`; Beads does not rewrite that
+identifier or select or name a runtime agent or model. Capability-detect the
+implementation skill through the current runtime. Do not search for or install
+a peer plugin during execution, and do not reimplement its workflow when it is
+absent. When collaboration is unavailable, the installed `sdd-implement`
+workflow retains its own transparent primary-agent fallback.
